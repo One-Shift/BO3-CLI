@@ -1,0 +1,38 @@
+{
+  "name": "bo3-cli",
+  "version": "1.0.0",
+  "description": "The BO3 command line interface (CLI) is your go-to tool for developing web apps with BO3.",
+  "main": "index.js",
+  "scripts": {
+    "test": "Apache-2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/One-Shift/BO3-CLI.git"
+  },
+  "keywords": [
+    "bo3",
+    "bozon",
+    "oneshift",
+    "one",
+    "shift"
+  ],
+  "author": "One-Shift",
+  "license": "ISC",
+  "bin": {
+    "bo3": "./index.js"
+  },
+  "bugs": {
+    "url": "https://github.com/One-Shift/BO3-CLI/issues"
+  },
+  "homepage": "https://github.com/One-Shift/BO3-CLI#readme",
+  "dependencies": {
+    "chalk": "^2.1.0",
+    "clear": "0.0.1",
+    "delete": "^1.1.0",
+    "figlet": "^1.2.0",
+    "minimist": "^1.2.0",
+    "nodegit": "^0.20.1",
+    "prompt-confirm": "^1.2.0"
+  }
+}
