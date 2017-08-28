@@ -31,7 +31,9 @@
     "clear": "0.0.1",
     "delete": "^1.1.0",
     "figlet": "^1.2.0",
+    "get-installed-path": "^3.0.1",
     "minimist": "^1.2.0",
+    "mkdirp": "^0.5.1",
     "nodegit": "^0.20.1",
     "prompt-confirm": "^1.2.0"
   }

@@ -65,10 +65,10 @@ function init () {
 function generate (args) {
 	switch (args[0]) {
 		case 'page':
-			lib_generate.page([]);
+			lib_generate.page(args);
 			break;
 		case 'page-e':
-			lib_generate.page_e([]);
+			lib_generate.page_e(args);
 			break;
 		case 'favicon':
 			lib_generate.favicon();
