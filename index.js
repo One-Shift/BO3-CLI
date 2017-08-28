@@ -1,15 +1,16 @@
 #!/usr/bin/env node
 
-var chalk       = require('chalk');
-var clear       = require('clear');
-var figlet      = require('figlet');
+var chalk			= require('chalk');
+var clear			= require('clear');
+var figlet			= require('figlet');
 
-var git         = require("nodegit");
-var Confirm     = require('prompt-confirm');
+var git				= require("nodegit");
+var Confirm			= require('prompt-confirm');
 
-var del         = require('delete');
+var del				= require('delete');
 
-var files       = require('./lib/files');
+var lib_files		= require('./lib/files');
+var lib_generate	= require('./lib/generate');
 
 switch(process.argv[2]) {
 	case 'init':
@@ -33,16 +34,16 @@ switch(process.argv[2]) {
 function init () {
 	if (
 		!(
-			files.directoryExists('backoffice') ||
-			files.directoryExists('install') ||
-			files.directoryExists('languages') ||
-			files.directoryExists('pages') ||
-			files.directoryExists('pages-e') ||
-			files.directoryExists('share') ||
-			files.directoryExists('site-assets') ||
-			files.directoryExists('templates') ||
-			files.directoryExists('templates-e') ||
-			files.directoryExists('u-files')
+			lib_files.directoryExists('backoffice') ||
+			lib_files.directoryExists('install') ||
+			lib_files.directoryExists('languages') ||
+			lib_files.directoryExists('pages') ||
+			lib_files.directoryExists('pages-e') ||
+			lib_files.directoryExists('share') ||
+			lib_files.directoryExists('site-assets') ||
+			lib_files.directoryExists('templates') ||
+			lib_files.directoryExists('templates-e') ||
+			lib_files.directoryExists('u-files')
 		)
 	) {
 		var confirm = new Confirm('Let\'s start a blizzard?').ask(function(answer) {
@@ -62,14 +63,26 @@ function init () {
 }
 
 function generate (args) {
-	console.log(args);
+	switch (args[0]) {
+		case 'page':
+			lib_generate.page([]);
+			break;
+		case 'page-e':
+			lib_generate.page_e([]);
+			break;
+		case 'favicon':
+			lib_generate.favicon();
+			break;
+		default:
+		console.log('Oh! You don\'t how I work, right?');
+	}
 }
 
 function start () {
 	clear();
 	console.log(chalk.green(figlet.textSync('BO3-CLI', { horizontalLayout: 'full' })));
 
-	if (files.directoryExists('.git')) {
+	if (lib_files.directoryExists('.git')) {
 		console.log(chalk.green('This folder uses git, nice!'));
 	} else {
 		console.log(chalk.red('Recomendation: Use git for your project!'));
