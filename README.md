@@ -1,10 +1,13 @@
 ![Imgur](http://i.imgur.com/cjeEGtL.jpg)
 
-# BO3-CLI
+BO3-CLI
+-------
 
 ## How to Install
 
+``` sh
 npm install bo3-cli -g
+```
 
 ## License
 
