@@ -1,7 +1,8 @@
-![Imgur](http://i.imgur.com/cjeEGtL.jpg)
-
 BO3-CLI
 -------
+
+![Imgur](http://i.imgur.com/cjeEGtL.jpg)
+
 
 ## How to Install
 
