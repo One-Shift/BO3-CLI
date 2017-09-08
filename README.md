@@ -21,33 +21,56 @@ $ cd ( project name )
 
 
 
-Init project
+### Init project
 
 ``` sh
 $ bo3
 $ bo3 init
 ```
 
-Generate page
+### Generate page
 
 ``` sh
 $ bo3 g page ( page name )
 
 eg.: bo3 g page contacts
 ```
+This will generate,
+```
+/pages/( page name ).php
+/templates/( page name ).tpl
+/site-assets/css/( page name ).css
+/site-assets/js/( page name ).js
+```
 
-Generate page
+### Generate page
 
 ``` sh
-$ bo3 g page-e ( page elemente name )
+$ bo3 g page-e ( page element name )
 
 eg.: bo3 g page-e mod-slideshow
 ```
+This will generate,
+```
+/templates-e/mod-( page element name ).tpl
+/templates-e/mod-( page element name ).tpl
+/site-assets/css/mod-( page element name ).css
+```
 
-Generate favicon (not working yet)
+### Generate favicon (not working yet)
 
 ``` sh
 $ bo3 g favicon
+```
+This will generate based on /site-assets/favicon/favicon.png,
+```
+/site-assets/favicon/favicon_16.png
+/site-assets/favicon/favicon_32.png
+/site-assets/favicon/favicon_48.png
+/site-assets/favicon/favicon_72.png
+/site-assets/favicon/favicon_114.png
+/site-assets/favicon/favicon_128.png
+/site-assets/favicon/favicon_144.png
 ```
 
 ## License
