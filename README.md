@@ -41,6 +41,12 @@ This will generate,
 /templates/( page name ).tpl
 /site-assets/css/( page name ).css
 /site-assets/js/( page name ).js
+
+eg.:
+/pages/contacts.php
+/templates/contacts.tpl
+/site-assets/css/contacts.css
+/site-assets/js/contacts.js
 ```
 
 ### Generate page
@@ -48,13 +54,18 @@ This will generate,
 ``` sh
 $ bo3 g page-e ( page element name )
 
-eg.: bo3 g page-e mod-slideshow
+eg.: bo3 g page-e slideshow
 ```
 This will generate,
 ```
-/templates-e/mod-( page element name ).tpl
-/templates-e/mod-( page element name ).tpl
+/templates-e/mod-( page element name )/index.html
+/templates-e/mod-( page element name )/mod-( page element name ).tpl
 /site-assets/css/mod-( page element name ).css
+
+eg.:
+/templates-e/mod-slideshow/index.html
+/templates-e/mod-slideshow/mod-slideshow.tpl
+/site-assets/css/mod-slideshow.css
 ```
 
 ### Generate favicon (not working yet)
